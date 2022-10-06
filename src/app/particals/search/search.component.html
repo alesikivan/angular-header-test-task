@@ -1,0 +1,53 @@
+<section class="search" [@block]="searchState">
+  <div class="search-input">
+    <input
+      (focus)="isFocus = true"
+      (blur)="isFocus = false"
+      [value]="searchValue"
+      (input)="setSearchValue($event)"
+      type="text">
+
+    <div class="clear-field">
+      <button
+        *ngIf="searchValue"
+        (click)="clearSearchValue()">
+        &times;
+      </button>
+    </div>
+
+    <button class="find">найти</button>
+  </div>
+
+  <div class="search-helper" *ngIf="isFocus">
+    <div class="hepler-sections">
+      <div>
+        <input type="checkbox"> мои
+      </div>
+
+      <input type="text" placeholder="Автор">
+    </div>
+
+    <div class="hepler-sections">
+      <label for="sort">Сортировать по</label>
+
+      <select id="sort">
+        <option value="date">Дате</option>
+      </select>
+
+    </div>
+
+    <div class="hepler-sections">
+      <div>
+        <input name="types" type="checkbox"> я участник
+      </div>
+
+      <div>
+        <input name="types" type="checkbox"> в заголовке
+      </div>
+
+      <div>
+        <input name="types" type="checkbox"> строгоий поиск
+      </div>
+    </div>
+  </div>
+</section>

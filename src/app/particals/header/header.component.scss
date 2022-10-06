@@ -1,0 +1,151 @@
+$headerBackGround: #1E76C6;
+
+.application-header {
+  min-height: 35px;
+  box-shadow: 3px 3px 4px #c0c9d2;
+  background-color: $headerBackGround;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .menu-image {
+      display: none;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      img {
+        height: auto;
+        max-width: 140px;
+      }
+    }
+
+    .search-block {
+      position: relative;
+
+      .search-area {
+        min-width: 600px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        overflow: hidden;
+
+        &.active {
+          overflow: unset;
+        }
+
+        .cover-for-amimate {
+          position: relative;
+          // left: 100px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .information {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .notifications {
+      position: relative;
+
+      .notifications-amount {
+        height: 10px;
+        width: 10px;
+        font-size: 0.6rem;
+        background-color: #C4414C;
+        color: #fff;
+        padding: 1px;
+        border-radius: 2px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        top: 2px;
+        right: 4px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .application-header {
+
+    display: flex;
+    flex-direction: column;
+
+    .navigation {
+      .links {
+        display: none;
+      }
+
+      .more-info {
+        display: none;
+      }
+
+      .menu {
+        display: flex;
+        gap: 10px;
+
+        .menu-image {
+          display: flex;
+        }
+      }
+    }
+
+    .information, .navigation {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .information {
+      &.hide {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 685px) {
+  .application-header {
+    .navigation {
+      .search-block {
+        .search-area {
+          min-width: 500px;
+        }
+      }
+    }
+
+    .information {
+      justify-content: space-around;
+    }
+  }
+}
+
+@media (max-width: 585px) {
+  .application-header {
+    padding: 10px 5px;
+  }
+  .application-header {
+    .navigation {
+      .search-block {
+        .search-area {
+          min-width: 400px;
+        }
+      }
+    }
+  }
+}

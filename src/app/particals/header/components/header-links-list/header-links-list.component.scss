@@ -1,0 +1,33 @@
+.links {
+  display: flex;
+  gap: 15px;
+  margin-left: 30px;
+
+  li {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+
+    span {
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 0.8rem;
+    }
+
+    img {
+      height: auto;
+      max-width: 7px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .links {
+    display: none;
+  }
+}

@@ -1,0 +1,41 @@
+<header class="application-header">
+  <nav class="navigation">
+    <div class="menu">
+      <header-button class="menu-image" [image]="images.menu" title="Меню"></header-button>
+
+      <a class="logo" [routerLink]="['/']">
+        <img [routerLink]="['/']" [src]="images.logo" alt="logo">
+      </a>
+    </div>
+
+    <header-links-list></header-links-list>
+
+    <div class="search-block" (clickOutside)="searchToggle(false)">
+      <header-button
+        [callback]="searchToggle.bind(this)"
+        [image]="images.search"
+        title="Поиск">
+      </header-button>
+
+      <div [class.active]="searchOverflow" [ngStyle]="{ display : isSearchActive ? 'flex' : 'none'}" class="search-area">
+        <div class="cover-for-amimate">
+          <app-search
+            [searchState]="searchState"
+            [isActive]="isSearchActive"></app-search>
+        </div>
+      </div>
+    </div>
+    <header-button class="more-info" [image]="images.more" title="Больше информации"></header-button>
+  </nav>
+
+  <nav class="information" [class.hide]="isSearchActive">
+    <header-button [image]="images.email" title="Написать нам"></header-button>
+
+    <div class="notifications">
+      <header-button [image]="images.bell" title="Показать уведомления"></header-button>
+      <span class="notifications-amount">4</span>
+    </div>
+
+    <profile-photo [image]="userProfileUrl"></profile-photo>
+  </nav>
+</header>

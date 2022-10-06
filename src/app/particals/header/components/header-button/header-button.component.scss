@@ -1,0 +1,21 @@
+button {
+  height: 30px;
+  width: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.7;
+  }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: auto;
+    max-width: 20px;
+  }
+}

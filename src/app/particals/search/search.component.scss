@@ -1,0 +1,106 @@
+.search {
+  width: 100%;
+
+  display: flex;
+  position: relative;
+
+  .search-input {
+    width: 100%;
+    min-height: 40px;
+    background-color: #fff;
+    border-radius: 2px;
+    overflow: hidden;
+
+    display: flex;
+
+    input {
+      width: 100%;
+
+    }
+
+    button, input {
+      background: none;
+      border: none;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    input {
+      width: calc(100% - 30px);
+      padding-left: 30px;
+      font-size: 1rem;
+
+      background-image: url('/assets/images/header/search/finder.svg');
+      background-size: 20px;
+      background-repeat: no-repeat;
+      background-position: left;
+      background-position-x: 7px;
+    }
+
+    .clear-field {
+      height: 100%;
+      width: 20px;
+      margin: 0 5px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        font-size: 1.1rem;
+        color: #757575;
+      }
+    }
+
+    .find {
+      background-color: #FDC301;
+      color: #fff;
+      padding: 0 10px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
+  }
+
+  .search-helper {
+    min-width: 300px;
+    padding: 10px;
+    box-shadow: 0px 0px 3px #c0c9d2;
+    border-radius: 2px;
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    position: absolute;
+    top: 44px;
+
+    .hepler-sections {
+      width: 100%;
+      min-height: 30px;
+
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      div {
+        font-size: 0.8rem;
+        color: #757575;
+
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      input[type=text] {
+        color: #757575;
+        min-height: 25px;
+        border: 1px solid #ccc;
+        padding-left: 10px;
+        border-radius: 3px;
+      }
+    }
+  }
+}

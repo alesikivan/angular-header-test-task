@@ -1,0 +1,15 @@
+.profile-photo {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: auto;
+    max-width: 30px;
+  }
+}
